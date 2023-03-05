@@ -23,8 +23,6 @@ app.use(express.json());
 
 
 
-
-
 // Sessions
 app.use(
     session({

@@ -19,7 +19,7 @@ uploadFile: async (req, res) => {
           });
      
 console.log("File has been added!");
-      res.redirect("/uploadFile");
+     res.redirect("/uploadFile")
     } catch (err) {
       console.log(err);
     }
@@ -34,4 +34,5 @@ getUploadedFile: async (req, res) => {
       console.log(err);
     }
 }
+
 }

@@ -7,6 +7,7 @@ const uploadController = require("../controllers/upload");
 
 //POST Route
 router.get("/:id", uploadController.getUploadedFile);
+//router.get("/uploadFile", uploadController.uploadPage )
 router.post("/uploadFile", uploadImageAndPdf.single("file"), uploadController.uploadFile);
 
 
