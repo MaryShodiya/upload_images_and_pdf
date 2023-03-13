@@ -8,12 +8,13 @@ module.exports = {
             console.log(err);
         }
     },
-    getUploadFile: async (req, res) => {
+
+   getUploadFile: async (req, res) => {
         try{
         const upload = await Upload.find().sort({createdAt: "desc" })
         res.render("upload.ejs", {upload: upload});
     } catch(err) {
-
+         console.log(err);
     }
-}
+        }
   };

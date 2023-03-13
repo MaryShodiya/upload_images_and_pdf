@@ -13,15 +13,13 @@ require("dotenv").config({ path: "./config/.env" });
 
 //Connect To Database
 connectDB();
-
+ 
 //Using EJS for views
 app.set("view engine", "ejs");
 
 //Body Parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-
 
 
 
