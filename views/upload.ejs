@@ -15,8 +15,11 @@
      <section>
          <% for (let im of upload) { %>
         <h5><%= im.title %></h5>
+        <% if (im.image) { %>
         <img src="<%= im.image%>" class="" style="width:50rem; height:40rem;" />
-        <iframe src="<%= im.pdfUrl %>" width="100%" height="500"></iframe>
+        <% } else if (im.pdfUrl) { %>
+       <iframe src="<%= im.pdfUrl %>" width="100%" height="500"></iframe>
+         <% } %>
          <% } %>
       </section>
     </body>

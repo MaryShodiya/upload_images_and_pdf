@@ -8,6 +8,7 @@ module.exports = {
 uploadFile: async (req, res) => {
     try {
       // Upload image to cloudinary
+      if (req.file !==  undefined) {
       const result = await cloudinary.uploader.upload(req.file.path);
        
         //add response to model objects
@@ -17,6 +18,15 @@ uploadFile: async (req, res) => {
            pdfUrl: result.secure_url,
             cloudinaryId: result.public_id,
           });
+        } else { 
+          const result =  String;  
+          await Upload.create({
+            title: req.body.title,
+           image: result.secure_url,
+           pdfUrl: result.secure_url,
+            cloudinaryId: result.public_id,
+          });
+        }      
      
 console.log("File has been added!");
      res.redirect("/uploadFile")
