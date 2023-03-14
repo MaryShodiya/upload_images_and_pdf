@@ -7,11 +7,11 @@ const UploadSchema = new mongoose.Schema({
   },
   image: {
     type: String,
-    require: true,
+    require: false,
   },
   pdfUrl: {
     type: String,
-    required: true
+    required: false
   },
   cloudinaryId: {
     type: String,
